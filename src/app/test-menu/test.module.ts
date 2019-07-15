@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TestMenuComponent } from './test-menu.component';
+import { TestQuesComponent } from './test-ques/test-ques.component';
+import { RouterModule, Routes } from '@angular/router';
+
+export const routes: Routes = [
+  {path: '', component: TestMenuComponent},
+  {path: 'app-test-ques', component: TestQuesComponent}
+]
+
+
+@NgModule({
+  declarations: [
+    TestMenuComponent,
+    TestQuesComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule
+  ]
+})
+export class TestModule { }

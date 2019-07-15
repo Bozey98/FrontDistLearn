@@ -1,0 +1,28 @@
+
+<div class="container">
+        <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+                <ul class="queList">
+                        <li>
+                            {{ listQues[i].name }}
+                        </li>
+                    </ul>
+                    <ul class="ansList">
+                        <li *ngFor="let an of listAns"
+                        
+                        [class.selected]="an === selectAns"
+                        (click)="isClicked(an)"
+                        >
+                            {{ an.name }}
+                        </li>
+                    </ul>
+                    <button class="btn-al btn btn-success" (click)="nextQue()">Next question</button>
+
+          </div>
+          <div class="col-sm">
+
+          </div>
+        </div>
+      </div>
